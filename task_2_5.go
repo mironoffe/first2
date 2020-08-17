@@ -1,13 +1,10 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
 
 //5 Подается число N; N > 999 && N < 10000; Нужно выыести число десятков
 func main() {
-	var a float64
+	var a int
 	fmt.Scan(&a)
-	fmt.Println(int(math.Floor(a/10)) % 10)
+	fmt.Println(a / 10 % 10)
 }
