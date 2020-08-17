@@ -4,7 +4,8 @@ import "fmt"
 
 //4 Считать с клавиатуры число и вывести последнюю ее цифру
 func main() {
-	var a int
+	var a string
+	fmt.Println("Enter an integer number:")
 	fmt.Scan(&a)
-	fmt.Println(a % 10)
+	fmt.Println("The last digit is", a[len(a)-1:])
 }
