@@ -24,13 +24,10 @@ func main() {
 
 	strlen := len(str)
 	result := make([]rune, strlen, strlen*2)
-	i := 0
 	for _, symbol := range str {
 		result = append(result, symbol)
-		i++
 		if symbol >= 'a' && symbol <= 'z' {
 			result = append(result, '_')
-			i++
 		}
 	}
 	fmt.Println(string(result))
