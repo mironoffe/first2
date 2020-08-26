@@ -13,12 +13,25 @@ func main() {
 	//	str = strings.ReplaceAll(str, string(i), string(i)+"_")
 	//}
 	//
-	result := ""
+	//result := ""
+	//for _, symbol := range str {
+	//	result += string(symbol)
+	//	if symbol >= 'a' && symbol <= 'z' {
+	//		result += "_"
+	//	}
+	//}
+	//fmt.Println(result)
+
+	strlen := len(str)
+	result := make([]rune, strlen, strlen*2)
+	i := 0
 	for _, symbol := range str {
-		result += string(symbol)
+		result = append(result, symbol)
+		i++
 		if symbol >= 'a' && symbol <= 'z' {
-			result += "_"
+			result = append(result, '_')
+			i++
 		}
 	}
-	fmt.Println(result)
+	fmt.Println(string(result))
 }
