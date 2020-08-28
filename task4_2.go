@@ -23,6 +23,5 @@ func main() {
 	}
 
 	fmt.Println(a)
-	start = time.Now()
 	fmt.Println(time.Since(start))
 }
